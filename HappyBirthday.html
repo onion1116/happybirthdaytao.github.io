@@ -21,39 +21,99 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             max-width: 600px;
+            text-align: left;
         }
 
         .header {
-            font-size: 36px;
+            font-size: 32px;
             color: #333;
+            text-align: center;
         }
 
         .message {
-            font-size: 24px;
+            font-size: 18px;
             color: #666;
             margin: 20px 0;
         }
 
-        .confetti {
-            font-size: 50px;
+        .message.indent {
+            text-indent: 2em;
+            margin-top: 0;
+        }
+
+        .message.right {
+            text-align: right;
+            margin-top: 0;
+        }
+
+        .photo {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
             margin: 20px 0;
         }
 
-        .cake-emoji {
-            font-size: 100px;
+        .play-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
             margin-top: 20px;
+        }
+
+        .play-button:hover {
+            background-color: #1458a1;
+
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="confetti">🎉🎉🎉</div>
-        <div class="header">生日快乐！</div>
-        <div class="message">愿你今天的特别时刻充满快乐与惊喜，祝你新的一岁健康、幸福、如意！</div>
-        <div class="confetti">🎉🎉🎉</div>
-        <div class="cake-emoji">🎂</div>
+        <div class="header">21st 生日快乐！</div>
+        <button class="play-button" onclick="playAudio()">播放生日快乐歌曲</button>
+        <img src="线条小狗.jpg" alt="生日照片" class="photo">
+        <div class="message">6月21日的小陶寿星：</div>
+        <div class="message indent">
+            眨眼间，你又过了一岁，时间过的很快啊，这是我们一起陪你过的第一个生日，也是我们友谊不倒的见证。
+            把大牙闭上，知道你已经笑抽风了，油盐不进的假小子，哈哈哈哈哈，虽然但是吧，我们还是有些话想对你说：</div>
+        <div class="message indent">
+            三年前，我们因动画相聚，不曾设想小小的动画竟然把我们四个紧密串联了起来，答过辩、聚过餐、获过奖，浮现在脑海，历历在目。
+            还记得当时我们拿了省级一等奖，可给我们高兴坏了，这也是我们大学第一次那么高的成就感。
+            时间不语，把我们推到了人生的岔路口。
+            无论大家走在什么路，看什么风景，我们每个人都是潜力无限的，都会做出自己的一片天地，花会沿路盛开，我们未来的路也会。
+            无论时光如何流逝，愿我们的友谊依然如初，纯真而美好。
+        </div>
+        <div class="message indent">
+            人生漫漫，做我们自己，独一无二的自己，想到什么就做什么，即使是天马行空，不用紧张和害怕，更好的风景或许在等着我们。
+            无论未来有多少挑战，希望你始终保持勇敢、认真、热烈的心态。
+            永葆你那份面对世界的激情，纯真的笑容，无论遇到什么困难，都能用乐观和坚强去面对，享受当下每刻的绚烂和精彩。</div>
+        <div class="message indent">
+            “不是所有的鱼，都会生活在同一片海里。”
+            人各有不同，无论遇到什么样的人都不稀奇。</div>
+        <div class="message indent">
+            你不一定要出众，会有人看到平凡但又泛着光的你。风是不被定义的，希望你能自由快乐，
+            也一定要好好爱自己，多多关照自己的情绪，好好保重身体，剩下的可以慢慢去努力。</div>
+        <div class="message indent">
+            无论你活成什么样子，都会有人说三道四，
+            这个世界我们只来一次，吃想吃的饭，见想见的人,看喜欢的风景，做喜欢做的事，
+            你不一定非要活成玫瑰，你愿意的话做茉莉做雏菊，做向日葵，
+            做无名小花，做千千万万!</div>
+        <div class="message indent">不管几岁，快乐万岁，生日快乐！</div>
+        <div class="message right">李梦楚、韩旭、王崇杰</div>
+        <div class="message right">2024年6月夏</div>
     </div>
+
+    <audio id="birthdaySong" src="生日快乐-金玟岐.128.mp3" type="audio/mp3"></audio>
+    <script>
+        function playAudio() {
+            var audio = document.getElementById('birthdaySong');
+            audio.play();
+        }
+    </script>
 </body>
 
 </html>
